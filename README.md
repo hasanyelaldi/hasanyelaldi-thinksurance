@@ -14,11 +14,18 @@ Which users are authorized to call which services?
 
 User:
 
-`GET http://localhost:3000/person-service/get-all POST http://localhost:3000/array-service/clear-array`
+```
+GET http://localhost:3000/person-service/get-all
+POST http://localhost:3000/array-service/clear-array`
+```
 
 Admin:
 
-`GET http://localhost:3000/person-service/get-all POST http://localhost:3000/array-service/clear-array POST http://localhost:3000/enable/{service-name}`
+```
+GET http://localhost:3000/person-service/get-all
+POST http://localhost:3000/array-service/clear-array
+POST http://localhost:3000/enable/{service-name}
+```
 
 ## Architecture
 
