@@ -2,9 +2,23 @@
 
 ## Quick Start
 
+Run the corresponding docker-compose command and wait for the services to stand up.
+
 ```
 docker-compose up
 ```
+
+You can examine and call services using the postman collection located under the public folder.
+
+Which users are authorized to call which services?
+
+User:
+
+`GET http://localhost:3000/person-service/get-all POST http://localhost:3000/array-service/clear-array`
+
+Admin:
+
+`GET http://localhost:3000/person-service/get-all POST http://localhost:3000/array-service/clear-array POST http://localhost:3000/enable/{service-name}`
 
 ## Architecture
 
@@ -149,8 +163,7 @@ Body:
 
 ```json
 {
-    "url": {service-url},
-    "enabled": true
+	"url": "{service-name}"
 }
 ```
 
@@ -158,6 +171,6 @@ Body:
 
 ```json
 {
-	Successfully enabled/disabled {service-url} for service {service-name}
+	"Successfully enabled/disabled {service-url} for service {service-name}"
 }
 ```
