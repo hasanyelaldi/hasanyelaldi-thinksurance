@@ -10,6 +10,12 @@ docker-compose up
 
 ![Arc](https://github.com/hasanyelaldi/hasanyelaldi-thinksurance/blob/main/public/thk_arch.png)
 
+## Default Setup
+
+Initially, a total of 3 services will run, 1 api-gateway, 1 person-service and 1 array-service.
+Additionaly It's possible to create a replica of any service on docker, all you have to do is add the instance you created to the relevant service in the registry.json file.
+
+![Default](https://github.com/hasanyelaldi/hasanyelaldi-thinksurance/blob/main/public/default_setup.png)
 
 # REST API
 
