@@ -1,0 +1,32 @@
+{
+	"services": {
+		"array-service": {
+			"index": 0,
+			"instances": [
+				{
+					"apiName": "array-service",
+					"protocol": "http",
+					"host": "localhost",
+					"port": 5000,
+					"url": "http://array-service:5000/",
+					"enabled": true
+				}
+			],
+			"loadBalanceStrategy": "ROUND_ROBIN"
+		},
+		"person-service": {
+			"index": 0,
+			"instances": [
+				{
+					"apiName": "person-service",
+					"protocol": "http",
+					"host": "localhost",
+					"port": 4000,
+					"url": "http://person-service:4000/",
+					"enabled": true
+				}
+			],
+			"loadBalanceStrategy": "ROUND_ROBIN"
+		}
+	}
+}

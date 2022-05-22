@@ -1,4 +1,16 @@
-# REST API's
+# Overview
+
+## Quick Start
+
+```
+docker-compose up
+```
+
+## Architecture
+
+![Arc](https://github.com/hasanyelaldi/hasanyelaldi-thinksurance/public/thk_arch.png)
+
+# REST API
 
 The REST API to the main app is described below.
 
@@ -12,20 +24,20 @@ The REST API to the main app is described below.
 
 ```json
 [
-    {
-        "firstname": "Hasan",
-        "lastname": "Yelaldi",
-        "birthday": "29.05.1993",
-        "address": "İstanbul / Turkey",
-        "phoneNumber": "+905533513210"
-    },
-    {
-        "firstname": "Isabelle",
-        "lastname": "Richter",
-        "birthday": "29.05.1993",
-        "address": "Frankfurt / Germany",
-        "phoneNumber": "+905533513210"
-    }
+	{
+		"firstname": "Hasan",
+		"lastname": "Yelaldi",
+		"birthday": "29.05.1993",
+		"address": "İstanbul / Turkey",
+		"phoneNumber": "+905533513210"
+	},
+	{
+		"firstname": "Isabelle",
+		"lastname": "Richter",
+		"birthday": "29.05.1993",
+		"address": "Frankfurt / Germany",
+		"phoneNumber": "+905533513210"
+	}
 ]
 ```
 
@@ -39,8 +51,8 @@ Body:
 
 ```json
 {
-    "array":  [1, 2, 3, 4, 5, 6, 7, 8],
-    "permutation": 3
+	"array": [1, 2, 3, 4, 5, 6, 7, 8],
+	"permutation": 3
 }
 ```
 
@@ -48,7 +60,7 @@ Body:
 
 ```json
 {
-    "removedItems": [3,6,1,5,2,8,4,7]
+	"removedItems": [3, 6, 1, 5, 2, 8, 4, 7]
 }
 ```
 
@@ -62,8 +74,8 @@ Body:
 
 ```json
 {
-    "user": "thinksurance",
-    "pwd": "Aa$12345"
+	"user": "thinksurance",
+	"pwd": "Aa$12345"
 }
 ```
 
@@ -71,11 +83,8 @@ Body:
 
 ```json
 {
-    "roles": [
-        2001,
-        5150
-    ],
-    "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySW5mbyI6eyJ1c2VybmFtZSI6InRoaW5rc3VyYW5jZSIsInJvbGVzIjpbMjAwMSwxOTg0LDUxNTBdfSwiaWF0IjoxNjUzMTQ1NjkyLCJleHAiOjE2NTMxNDU5OTJ9.gEF2kBmMbtcjSs1HmAEGHIbRaFy4CXMBBrDrMSd5llY"
+	"roles": [2001, 5150],
+	"accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySW5mbyI6eyJ1c2VybmFtZSI6InRoaW5rc3VyYW5jZSIsInJvbGVzIjpbMjAwMSwxOTg0LDUxNTBdfSwiaWF0IjoxNjUzMTQ1NjkyLCJleHAiOjE2NTMxNDU5OTJ9.gEF2kBmMbtcjSs1HmAEGHIbRaFy4CXMBBrDrMSd5llY"
 }
 ```
 
@@ -87,11 +96,8 @@ Body:
 
 ```json
 {
-    "roles": [
-        2001,
-        5150
-    ],
-    "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySW5mbyI6eyJ1c2VybmFtZSI6InRoaW5rc3VyYW5jZSIsInJvbGVzIjpbMjAwMSwxOTg0LDUxNTBdfSwiaWF0IjoxNjUzMTQ1NjkyLCJleHAiOjE2NTMxNDU5OTJ9.gEF2kBmMbtcjSs1HmAEGHIbRaFy4CXMBBrDrMSd5llY"
+	"roles": [2001, 5150],
+	"accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySW5mbyI6eyJ1c2VybmFtZSI6InRoaW5rc3VyYW5jZSIsInJvbGVzIjpbMjAwMSwxOTg0LDUxNTBdfSwiaWF0IjoxNjUzMTQ1NjkyLCJleHAiOjE2NTMxNDU5OTJ9.gEF2kBmMbtcjSs1HmAEGHIbRaFy4CXMBBrDrMSd5llY"
 }
 ```
 
@@ -103,7 +109,7 @@ Body:
 
 ```json
 {
-    "success": "Logged out!"
+	"success": "Logged out!"
 }
 ```
 
@@ -111,10 +117,12 @@ Body:
 
 `POST http://localhost:3000/register/`
 
+Body:
+
 ```json
 {
-    "user": "hasanyelaldi",
-    "pwd": "Aa$12345"
+	"user": "hasanyelaldi",
+	"pwd": "Aa$12345"
 }
 ```
 
@@ -122,6 +130,6 @@ Body:
 
 ```json
 {
-    "success": "New user hasanyelaldi created!"
+	"success": "New user hasanyelaldi created!"
 }
 ```

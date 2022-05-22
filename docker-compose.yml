@@ -1,0 +1,26 @@
+version: '3'
+services:
+  api-gateway:
+    image: api-gateway
+    build:
+      context: .
+      dockerfile: api-gateway/Dockerfile
+    ports:
+      - '3000:3000'
+
+  array-service:
+    container_name: array-service
+    image: array-service
+    build:
+      context: .
+      dockerfile: array-service/Dockerfile
+    ports:
+      - '5000:5000'
+
+  person-service:
+    image: person-service
+    build:
+      context: .
+      dockerfile: person-service/Dockerfile
+    ports:
+      - '4000:4000'
