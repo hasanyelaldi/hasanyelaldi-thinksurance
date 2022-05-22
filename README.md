@@ -8,7 +8,8 @@ docker-compose up
 
 ## Architecture
 
-![Arc](https://github.com/hasanyelaldi/hasanyelaldi-thinksurance/public/thk_arch.png)
+![Arc](https://github.com/hasanyelaldi/hasanyelaldi-thinksurance/blob/main/public/thk_arch.png)
+
 
 # REST API
 
@@ -131,5 +132,26 @@ Body:
 ```json
 {
 	"success": "New user hasanyelaldi created!"
+}
+```
+
+### Enable-Disable Services Request
+
+`POST http://localhost:3000/enable/{service-name}`
+
+Body:
+
+```json
+{
+    "url": {service-url},
+    "enabled": true
+}
+```
+
+### Response
+
+```json
+{
+	Successfully enabled/disabled {service-url} for service {service-name}
 }
 ```
